@@ -1,0 +1,111 @@
+{%extends 'base.html'%}
+ {%block content%}
+ 
+	<!-- banner 2 -->
+<br>
+	<!-- page details -->
+	<div class="breadcrumb-agile">
+		<div aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="/">Home</a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Covid Disease</li>
+			</ol>
+		</div>
+	</div>
+	<!-- //page details -->
+
+	<!-- contact -->
+	<div class="appointment py-5">
+		<div class="py-xl-5 py-lg-3">
+			<div class="w3ls-titles text-center mb-5">
+				<h3 class="title">Covid Disease Prediction</h3>
+				<span>
+					<i class="fas fa-user-md"></i>
+				</span>
+				<hr />
+      {% if value %}
+      <div class="display-4 my-2 text-center">
+        Your Covid disease is been checked
+        <br>
+        <p>TO download <a href="{{new_png}}">{{new_png}}</a></p>
+      </div>
+      {% endif %}
+			</div>
+      
+
+      <p id="demo"></p>
+      
+     
+      
+		
+				<div class="col-lg-12  contact--w3l">
+					<h5 class="title-w3 text-center mb-5">Get In Touch</h5>
+                    <div class="mt-4">
+                        <form class="row container text-center" method="POST" action="{% url 'covid' %}">
+                          {% csrf_token %}
+                          <div class="col-md-4">
+                            <label style="color: black;" for="fullname">Fullname</label>
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="fullname"
+                                value=""
+                                name="fullname"
+                                placeholder="Enter Your Full Name."/>
+                            </div>
+                            <label style="color: black;" for="Oxy">Oxy</label>
+                            <div class="form-group">
+                              <input
+                                type="number"
+                                step=".00001"
+                                class="form-control"
+                                id="Oxy"
+                                value=""
+                                name="Oxy"
+                                placeholder="Enter Your Oxygen Value[99]"
+                              />
+                            </div>
+                            <label style="color: black;" for="Pulse">Pulse</label>
+                            <div class="form-group">
+                              <input
+                                type="number"
+                                step=".00001"
+                                class="form-control"
+                                id="Pulse"
+                                value=""
+                                name="Pulse"
+                                placeholder="Enter Your Pulse Value[70]"
+                              />
+                            </div>
+                            <label style="color: black;" for="Temp">Temprature</label>
+                            <div class="form-group">
+                              <input
+                                type="number"
+                                step=".00001"
+                                class="form-control"
+                                id="Temp"
+                                value=""
+                                name="Temp"
+                                placeholder="Enter Your Temp Value[97]"
+                              />
+                            </div>
+                            
+                    
+                            <button type="submit" class="btn-lg btn-block btn btn-primary mb-5">
+                              Submit
+                            </button>
+                          
+                          </div>
+                        </form>
+                      </div>
+				</div>
+				<div class="clerafix"></div>
+			</div>
+		</div>
+	
+	<!-- //contact -->
+
+{% endblock %}

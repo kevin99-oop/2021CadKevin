@@ -1,0 +1,82 @@
+{%extends 'base.html'%} 
+{% block title %} Diabetes Prediction  {% endblock %}
+{%block content%}
+
+<style> 
+.contact-right-w3l
+{
+text-align: center;
+
+}
+  
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+</style>
+	<!-- banner 2 -->
+	<br><br><br><br><br><br><div class="">
+		<div class="container">
+   
+		</div>
+		<!-- //banner 2 -->
+	</div>
+	<!-- page details -->
+	<div class="breadcrumb-agile">
+		<div aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="/">Home</a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Dashboard Health care monitring system for Diabetes</li>
+			</ol>
+		</div>
+	</div>
+	<!-- //page details -->
+
+<!-- contact -->
+
+  
+        <div class="container">
+          <h1 class="text-center">Dashboard For Diabeties DataSet</h1>
+            
+          
+              {%for h in alltasks2%}
+              <table>
+                <tr>
+                  <th>NAME</th>
+                  <th>glucose</th>
+                  <th>bloodpressure</th>
+                  <th>bmi</th>
+                  <span class="one-line"><th>Result</th></span>
+              <br>
+                </tr>
+                <tr>
+                  <td>{{h.name}}</td>
+                  <td>{{h.glucose}}</td>
+                  <td>{{h.bloodpressure}}</td>
+                  <td>{{h.bmi}}</td>
+                  <td>{{h.result1}}</td>
+                </tr>
+                </tr>
+              </table>
+              {%endfor%}
+          </div>
+     
+{% endblock %}

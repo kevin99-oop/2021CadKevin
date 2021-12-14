@@ -1,0 +1,709 @@
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    overflow-x: scroll;
+    overflow-y: auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      font-family: 'Inter', sans-serif!important;
+      margin: 0;
+      padding: 0;
+  }
+  .stickeybar
+  {
+      background-color: blue;
+      height:40px;
+      color: white;
+      
+  }
+  #navbar_top .active 
+  {
+      text-decoration-line: underline !important;
+      text-decoration-thickness: 2px !important;
+      color: blue!important;
+  }
+  .imghead{
+     
+      background-size: cover;
+      background-position: top;
+      padding-top: 200px;
+      width: 100%;
+      height: 78vh;
+      
+  }
+  .demo 
+  { 
+      color: blue;
+  }
+  .sticky-top 
+  {
+      color: red;
+  }
+  .navbar{
+      color: black;
+  }
+  .imghead button{
+      font-size: 12px;
+      padding: 10px;
+  }
+  .fa-play-circle-o
+  {
+      font-size: 23px!important;
+      margin-left: 10px;
+      
+  }
+  .card {
+      margin: 15px;   
+      min-width: 0;
+      
+    }
+  .card-2 {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      width: 100%!important;
+      border: 0;
+    }
+   .card .fa, .fas{
+       font-size: 30px!important;
+   }
+   #about ,#company ,#corosal, #Teams, #FAQ, #Newsletter{
+      background-color:whitesmoke ;
+   }
+   #about .btn, h3 
+     {
+       text-align:center;
+   }
+  
+  #about p
+  {
+  text-align: center;
+  }
+   .btn-circle.btn-sm {
+      width: 8%;
+      height: auto;
+      padding: 6px 0px;
+      border-radius: 30px;
+      font-size: 15px;
+      text-align: center;
+      background-color: #dae0f5;
+      color: blue;
+  }
+  .img-thumbnail {
+          padding: 0px!important;
+          border: 0px!important; 
+          border-radius: .25rem;
+          max-width: 100%;
+          height: auto;
+      }
+      .btn-circle.btn-xl {
+          width: 50px;
+          height: 50px;
+          border-radius: 55px;
+          font-size: 18px; 
+          text-align: center;
+          box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+      }
+  .col-md-auto h6
+  {
+      font-size: 15px;
+  }
+  .col-md-auto .small
+  {
+      font-size: 15px;
+  }
+  
+  
+  .com.img{
+  padding: 10px;
+      margin: 10px;
+      align-items: center;
+  }
+  .card-3
+  {
+      background-color: #dae0f5!important;
+      width: 100%!important;
+      border: 0px!important;
+      position: absolute;
+  }
+  #Services .btn-circle.btn-sm {
+      width: 10%;
+      height: auto;
+      padding: 6px 0px;
+      border-radius: 30px;
+      font-size: 15px;
+      text-align: center;
+      background-color: #dae0f5;
+      color: blue;
+  }
+  
+  .btn-circle.btn-md {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      margin-left: 40%;
+      font-size: 10%!important; 
+      text-align: center;
+      box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  }
+  .card-4{
+      background-color: transparent!important;
+      width: 100%!important;
+      border: 1px solid #dae0f5!important;
+      position: absolute;
+      padding: 50px;
+      font-size: 15px;
+      height: 10%;
+  }
+  #Services .fa{
+      font-size: 20px;
+  }
+  
+  .card-4 .fa, .fas{
+      font-size: 20px!important;
+  }
+    
+  
+  .card-5 .card-body
+  {
+      background-color: white!important;
+     
+  }
+  
+  
+  
+  #info .btn-circle.btn-md {
+      position: relative;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0px!important;
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      border-radius: 80%;
+      border: 4px solid #fff;
+      margin-top: -50px;
+      font-size: 25px!important;
+  }
+  
+  
+  #Contact .btn-circle.btn-sm {
+      width: 10%;
+      height: auto;
+      padding: 6px 0px;
+      border-radius: 30px;
+      font-size: 15px;
+      text-align: center;
+      background-color: #dae0f5!important;
+      color: blue;
+  }
+  #Contact .btn-circle.btn-md {
+      position: relative;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0px!important;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 80%;
+      border: 4px dotted #0275d8;
+      font-size: 20px!important;
+     
+  }
+  
+  #Contact .btn-circle.btn-md:hover
+  
+  {
+      background-color: #fff !important;
+  text-decoration: none;
+  }
+  
+  #Contact iframe{
+      width: 105%!important;
+      height: 400px!important;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 0;
+  }
+  
+  #Contact .card.card-8
+  {
+      top: 0;
+      margin-left: 45px;
+      margin-top: 0;
+      width: 10%!important;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      width: 100%!important;
+      border: 0;
+  
+  }
+  #Contact .message
+  {
+      font-size: 15px;
+  }
+  
+  
+  
+  
+  .Center {
+      width:200px;
+      height:200px;
+      position: fixed;
+      background-color: blue;
+   
+  }
+  
+  
+  /**/
+  .footernetwork
+  {font-size: 13px;}
+  #footer .fab 
+  {
+      font-size: 30px!important;
+  }
+  
+  
+  
+    .owl-theme .owl-dots .owl-dot.active span, 
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: #2caae1!important;
+    }
+  
+  
+   
+  /*----------------Responsive code-------------*/
+  /* Landscape */
+  @media only screen 
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+  }
+  
+  /*responsive*/
+  @media screen and (max-width: 320px) {
+      .navbar a:not(:first-child) {display: none;}
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+    }
+  
+  @media screen and (max-width: 480px) {
+      .stickeybar{
+              font-size: 10px;
+              padding: 1px;
+      }
+    
+     #card .col {
+          -ms-flex-preferred-size: 0;
+          flex-basis:33.333%;
+          max-width:33.333%;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          max-width: 100%;
+          display: flex;
+          font-size: 17px;
+      }
+      .btn-circle.btn-sm {
+          width: 27%;
+          font-size: 16px;
+      }
+      .col-lg-2.img{
+          margin-bottom: 50px;
+          width: 10%;
+      }
+      .col-md-auto{
+          width: 100%;
+          margin-left: 30px;
+          margin-left: 73px;
+          margin-top: -105px;
+      }
+      #info .col {
+          -ms-flex-preferred-size: 0;
+          flex-basis:33.333%;
+          max-width:33.333%;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          max-width: 100%;
+          display: block;
+          font-size: 15px;
+          margin-right: 30px;
+      }
+      #Services .btn-circle.btn-sm {
+          width: 27%;
+          font-size: 16px;
+      }
+      .card-body {
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          min-height: 145px;
+          padding: 1.25rem;
+      }
+     
+      #Services .card {
+          /* position: relative; */
+          display: -ms-flexbox;
+          display: table-header-group;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          min-width: 0;
+          word-wrap: break-word;
+          background-color: #fff;
+          background-clip: border-box;
+          border: 1px solid rgba(0,0,0,.125);
+          border-radius: .25rem;
+          width: 90%!important;
+      }
+  
+    
+      #Contact .btn-circle.btn-sm {
+          width: 30%;
+      }
+      #Contact .card {
+         
+           word-wrap:break-word; 
+           padding: 0px;
+        
+      }
+      #Contact .col-6 {
+          -ms-flex: 0 0 50%;
+          flex: 100%;
+          max-width: 100%;
+      }
+      #Contact .col-6 {
+          -ms-flex: 0 0 50%;
+          flex: 100%;
+          max-width: 95%;
+      }
+      #Contact .card.card-8 {
+          top: 10px;
+           margin-left:15px; 
+           margin-top: 0; 
+          
+      }
+      #Newsletter .input-group {
+           width: 100%!important;
+          position: relative;
+          top: 50%;
+       left:0%;
+      }
+      #footer .pr-5, .px-5 {
+           padding-right: 0px!important; 
+      }
+  #footer .mt-5, .my-5 {
+       margin-top: 10px!important;
+       
+  }
+      #footer .fa, .fas{
+          color: white!important;
+      }
+      
+      #footer .list-unstyled.quick-links.link{
+          margin-right: 29px;
+      }
+      #footer .list-unstyled.quick-links.link1{
+          margin-right: 10px;
+      }
+      .card-deck {
+        display:block!important;
+      }
+    }
+    h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 45%!important; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: rgb(75, 147, 189);
+  
+  z-index: -1;
+  transition: transform .9s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 15rem;
+}
+
+  </style>
+{% extends 'base.html' %}
+{% block title %} Home  {% endblock %}
+{% block content %}
+{% load static %}
+ 
+<section class="imghead" >
+    <div class="container" >
+        <div class="  row align-items-left">
+          <div class="col-12">
+           <h1 class="name font-weight-bold" >Welcome to <span class="text demo">ONLINE HEALTH SYSTEM </span></h1>
+           <p class="lead text-secondary">Improving Lives Together</p>
+		   <p class="lead text-secondary">Cad Project G-13 Iot Alcohol and Health Monitoring System
+			</p>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </header>
+<!--End of Main Header-->
+
+<!--Card section-->
+<section id="card">
+    <div class="container mt-5 mb-5">
+        <div class="row card-1">
+            <div class="col card card-2">
+                <div class="card-body">
+                    <i class="fas fa-heartbeat text-primary" aria-hidden="true"></i>
+                  <h6 class="card-subtitle mt-2 mb-2 font-weight-bold">General health care</h6>
+                  <p class="card-text text-secondary ">Put data and see the result.</p>   
+                </div>
+              </div>
+              <div class="col card card-2">
+                <div class="card-body">
+                    <i class="fas fa-user-md text-primary" aria-hidden="true"></i>
+                  <h6 class="card-subtitle mt-2 mb-2 font-weight-bold">Medical Treatment </h6>
+                  <p class="card-text text-secondary small">We can help in medical seeing that person is having proper report or no.</p>   
+                </div>
+              </div>
+              <div class="col card card-2">
+                <div class="card-body">
+                    <i class="far fa-file-alt text-primary" aria-hidden="true"></i>
+                  <h6 class="card-subtitle mt-2 mb-2 font-weight-bold">Detailed Report</h6>
+                  <p class="card-text text-secondary small">We will show the detailed report in the file which can be downloaded.</p>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+             
+
+<!--About section end-->
+
+<!--Info section start-->
+<!--Info section end-->
+
+<!--company images section end-->
+<section id="Services">
+  <div class="container pt-5 mb-5">
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn text-primary font-weight-bold btn-circle btn-sm text-uppercase">Services</button>
+      </div>
+    </div>
+    <h3  class="mt-2 font-weight-bold p-3">Check our <span class="text-primary">Services</span></h3>
+    <p class=" p-3 text-justify text-center">Here in this WEBSITE you can check your health by importing some values in the modules like <span class="text-primary"><br>DIABETES, COVID and ALCOHOL</span></p>
+    </div>
+    <div class="container pb-5">
+      <div class="card-deck">
+        <div class="col card card-4">
+          <div class="card-body text-center">
+            <i class="fas fa-stethoscope text-primary btn btn-light text-primary btn-square p-3" aria-hidden="true"></i>
+            <h6 class="card-subtitle mt-2 mb-2 font-weight-bold mt-3">Check Diabetes</h6>
+            <p class="small text-secondary mb-0">This simple online <span class="text-primary">DIABETES</span> screening test helps assess your risk for having or developing <span class="text-primary">DIABETES</span> </p>   
+          </div>
+        </div>
+        <div class="col card card-4">
+          <div class="card-body text-center">
+            <i class="fas fa-viruses text-primary btn btn-light text-primary btn-square p-3" aria-hidden="true"></i>
+              <h6 class="card-subtitle mt-2 mb-2 font-weight-bold mt-3">Check Covid </h6>
+              <p class="small text-secondary mb-0">This simple online <span class="text-primary"> COVID</span> test helps assess your risk for having or developing <span class="text-primary">COVID</span> </p>   
+          </div>
+        </div>
+        <div class="col card card-4">
+          <div class="card-body text-center">
+            <i class="fas fa-beer text-primary btn btn-light text-primary btn-square p-3" aria-hidden="true" href=></i>
+              <h6 class="card-subtitle mt-2 mb-2 font-weight-bold mt-3">Check Alcohol </h6>
+              <p class="small text-secondary mb-0">This simple online <span class="text-primary">ALCOHOL</span> test helps assess your risk for having or developing <span class="text-primary">ALCOHOL</span> </p>   
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End of services section-->
+
+
+
+<!--End of teams section-->
+
+<!--Contact section start -->
+<section id="Contact">
+  <div class="container pt-5 mb-5 ">
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn text-primary font-weight-bold btn-circle btn-sm text-uppercase  font-weight-bold">Contact</button>
+      </div>
+    </div>
+    <h3 class="mt-2 font-weight-bold p-3 text-primary">Contact Us </h3>
+    <p class="text-justify text-center">Can contact us by following details</p>
+    <div class="row card-1">
+      <div class="col-6 card card-2 text-center">
+          <div class="card-body">
+            <button type="button" class="btn btn-light text-primary btn-circle btn-md bg-light"><i class="fas fa-map-marker-alt text-primary" aria-hidden="true"></i></button>
+            <h6 class="card-subtitle mt-2 mb-2 font-weight-bold text-secondary mt-3">Our Address</h6>
+            <p class="card-text small">A 108 My Home, Bodakdev, AHMEDABAD 398832 Gujarat.</p>   
+          </div>
+        </div>
+        <div class="col card card-2 text-center ">
+          <div class="card-body">
+            <button type="button" class="btn btn-light text-primary btn-circle btn-md bg-light"><i class="far fa-envelope" aria-hidden="true"></i></button>
+            <h6 class="card-subtitle mt-2 mb-2 font-weight-bold mt-3 text-secondary">Email Us </h6>
+            <p class="card-text  small">onlinehealth@ohc.co.in</p>   
+          </div>
+        </div>
+        <div class="col card card-2 text-center">
+          <div class="card-body">
+            <button type="button" class="btn btn-light text-primary btn-circle btn-md bg-light"><i class="fas fa-phone-alt text-primary"></i></button>
+            <h6 class="card-subtitle mt-2 mb-2 font-weight-bold mt-3 text-secondary">Call Us</h6>
+            <p class="card-text text-secondary small">+91 8888 8888 88</p>   
+          </div>
+        </div>       
+        </div>
+        <div class="row">
+          <div class="col-11 ml-3 mt-3 map" id="testing_employers">
+            <div id="map-container-google-1" class="z-depth-1-half map-container">
+              <iframe src="https://maps.google.com/maps?q=ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed" width="105%" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Contact section END -->
+
+
+<!--Newsletter section end-->
+<section id="footer">
+  <div class="container-fluid pt-5 mb-5 text-center ">
+  <div class="container text-center text-md-left mt-5">
+    <div class="row mt-3 dark-grey-text">
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Demo.</h6>
+        <p class="mt-3 pr-5 text-muted md text justify">A 108 My Home, 
+          <br>Bodakdev, AHMEDABAD 398832 Gujarat.</p>
+          <p class="md mt-5 ">
+             <span class="font-weight-bold"> Phone: </span>+91 8888 8888 88</p>
+             <p class="md mt-1 ">
+                  <span class="font-weight-bold">Email:</span> onlinehealth@ohc.co.in</p>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">Useful Links</h6>
+        <ul class="list-unstyled quick-links link">
+          <li><a href="#"><i class="fa fa-angle-right text-primary ml-3 mt-2 mb-3"></i><span class="text-muted ml-2 small">Home</span></a></li>
+          <li><a href="#"><i class="fa fa-angle-right text-primary ml-3 mt-2 mb-3"></i><span class="text-muted ml-2 small">About</span></a></li>
+          <li><a href="#"><i class="fa fa-angle-right text-primary ml-3 mt-2 mb-3"></i><span class="text-muted ml-2 small">Services</span></a></li>
+          <li><a href="#"><i class="fa fa-angle-right text-primary ml-3 mt-2 mb-3"></i><span class="text-muted ml-2 small">Terms of services</span></a></li>
+          <li><a href="#"><i class="fa fa-angle-right text-primary ml-3 mt-2 mb-3"></i><span class="text-muted ml-2 small">Privacy Policy</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Our Social Networks</h6>
+        <p class="mt-3 footernetwork text-muted  text justify">Do Follow Us on Different Social meadia Pages.</p>
+          <i class="fab fa-twitter-square ml-1 text-primary"></i>
+          <i class="fab fa-facebook-square ml-1 text-primary"></i>
+          <i class="fab fa-instagram-square ml-1 text-primary"></i>
+          <i class="fab fa-skype ml-1 text-primary"></i>
+          <i class="fab fa-linkedin-square ml-1 text-primary"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</section>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+ function counter(id, start, end, duration) {
+  let obj = document.getElementById(id),
+   current = start,
+   range = end - start,
+   increment = end > start ? 1 : -1,
+   step = Math.abs(Math.floor(duration / range)),
+   timer = setInterval(() => {
+    current += increment;
+    obj.textContent = current;
+    if (current == end) {
+     clearInterval(timer);
+    }
+   }, step);
+ }
+ counter("count1", 1, 600, 10000);
+ counter("count2", 0, 150, 10000);
+ counter("count3", 0, 1463, 10000);
+ counter("count4", 10, 200, 10000);
+});
+
+	</script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      } 
+  });
+}); 
+// DOMContentLoaded  end
+</script>
+{% endblock %}

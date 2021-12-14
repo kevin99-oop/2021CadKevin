@@ -1,0 +1,97 @@
+{%extends 'base.html'%} 
+{% block title %} Covid Prediction  {% endblock %}
+{%block content%}
+
+<style> 
+.contact-right-w3l
+{
+text-align: center;
+
+}
+  
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+</style>
+	<!-- banner 2 -->
+	<br><br><br><br><br><br>
+	<!-- page details -->
+	<div class="breadcrumb-agile">
+		<div aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="/">Home</a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Dashboard Health care monitring system for Covid</li>
+			</ol>
+		</div>
+	</div>
+	<!-- //page details -->
+
+<!-- contact -->
+
+<div class="container">
+  <h1 class="text-center">Dashboard For Covid DataSet</h1>
+  
+      {%for i in alltasks%}
+      <table id="table1">
+        <tr>
+          <th>NAME</th>
+          <th>OXYGEN</th>
+          <th>Pulse</th>
+          <th>Temp</th>
+          <th>Result</th>
+      <br>
+        </tr>
+        <tr>
+          <td>{{i.Name}}</td>
+          <td>{{i.Oxy}}</td>
+          <td>{{i.Pulse}}</td>
+          <td>{{i.Temp}}</td>
+          <td>{{i.result}}</td>
+        </tr>
+        </tr>
+      </table>
+      {%endfor%}
+  </div>
+<script>
+  function searchrecord(){
+    var input,table,tr,td,filter;
+    input=document.getElementById("searchtxt");
+    filter=input.value.toUpperCase();
+    table=document.getElementById("table1");
+    tr=table.getElementsByTagName("tr");
+    for(i=0;i<tr.length;i++)
+    {
+      td=tr[i].getElementsByTagName("td")[1];
+      if(textdata.toUpperCase().indexOf(filter)>-1)
+      {
+        tr[i].style.display="";
+      }
+      else
+      {
+        tr[i].style.display="none";
+      }
+    }
+    
+
+  }
+</script>
+{% endblock %}

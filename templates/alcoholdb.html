@@ -1,0 +1,76 @@
+{%extends 'base.html'%} 
+{% block title %} Covid Prediction  {% endblock %}
+{%block content%}
+
+<style> 
+.contact-right-w3l
+{
+text-align: center;
+
+}
+  
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+</style>
+	<!-- banner 2 -->
+	<br><br><br><br><br><br>
+	<!-- page details -->
+	<div class="breadcrumb-agile">
+		<div aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="/">Home</a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Dashboard Health care monitring system for Covid</li>
+			</ol>
+		</div>
+	</div>
+	<!-- //page details -->
+
+<!-- contact -->
+
+  
+<div class="container">
+  <h1 class="text-center">Dashboard For Alcohol DataSet</h1>
+    
+  
+      {%for i in alltasks%}
+      <table>
+        <tr>
+          <th>Full Name</th>
+          <th>Age</th>
+          <th>BAC (Breath Alcohol Concentration) Value</th>
+          
+          <th>Result</th>
+      <br>
+        </tr>
+        <tr>
+          <td>{{i.Name1}}</td>
+          <td>{{i.Age}}</td>
+          <td>{{i.bac_val}}</td>
+          <td>{{i.result2}}</td>
+        </tr>
+        </tr>
+      </table>
+      {%endfor%}
+  </div>
+
+{% endblock %}
