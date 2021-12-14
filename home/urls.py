@@ -10,6 +10,6 @@ urlpatterns = [
     path('diabetesdb/',diabetesdb,name='diabetesdb'),
     path('coviddb/',coviddb,name='coviddb'),
     path('alcoholdb/',alcoholdb,name='alcoholdb'),
-    path('',include('account.urls')),
+    path('accounts',include('accounts.urls')),
     
 ]
